@@ -1,12 +1,12 @@
 'use strict';
 
-const productName = 'auto';
-const productCount = 6;
-const productCategory = 'Ferrari';
-const productPrice = 15000000;
+const productName2 = 'auto';
+const productCount2 = 6;
+const productCategory2 = 'Ferrari';
+const productPrice2 = 15000000;
 
-const productTotalPrice = productCount * productPrice;
+const productTotalPrice2 = productCount2 * productPrice2;
 
-console.log('productName: ', productName);
+console.log('productName2: ', productName2);
 
-console.log(productTotalPrice);
+console.log(productTotalPrice2);
