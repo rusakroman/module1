@@ -36,4 +36,7 @@ const productUserTotalPrice = productUserCount * productUserPrice;
 
 console.log(`На складе ${productUserCount} единицы товара ${productUserName} на сумму ${productUserTotalPrice} деревянных`);
 
+// Задача номер 2
+
+
 
