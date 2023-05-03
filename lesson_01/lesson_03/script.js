@@ -21,3 +21,19 @@ const productTotalPrice2 = productCount2 * productPrice2;
 console.log('productName2: ', productName2);
 
 console.log(productTotalPrice2);
+
+// Новый блок инструкций!!!!
+
+const productUserName = prompt('Введите наименование товара', '');
+const productUserCount = +prompt('Введите количество товара', '');
+const productUserPrice = +prompt('Введите Цену товара', '');
+
+console.log(typeof productUserName);
+console.log(typeof productUserCount);
+console.log(typeof productUserPrice);
+
+const productUserTotalPrice = productUserCount * productUserPrice;
+
+console.log(`На складе ${productUserCount} единицы товара ${productUserName} на сумму ${productUserTotalPrice} деревянных`);
+
+
