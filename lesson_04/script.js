@@ -30,6 +30,12 @@
   console.log(typeof productCount);
   console.log(typeof productPrice);
   const productTotalPrice = productCount * productPrice;
-  console.log(`На складе ${productCount} единицы товара ${productName} на сумму ${productTotalPrice} деревянных`);
+
+  if ((typeof productCount === 'number' && productCount > 0) && (typeof productPrice === 'number' && productPrice > 0)) {
+    console.log(`На складе ${productCount} единицы товара ${productName} на сумму ${productTotalPrice} деревянных`);
+  } else {
+    console.log("Вы ввели некорректные данные");
+  }
 }
+
 
