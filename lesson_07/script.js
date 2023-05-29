@@ -6,7 +6,7 @@ const neudStudents = ['Сидоров', 'Смирнов', 'Попов'];
 
 const goodStudents = [];
 
-for (let i = 0; i < students.length; i++) {
+for (let i = 0; i < allStudents.length; i++) {
   for (let j = 0; j < neudStudents.length; j++) {
     if (neudStudents[j] !== students[i]) {
       goodStudents.push(students[i]);
