@@ -8,8 +8,8 @@ const goodStudents = [];
 
 for (let i = 0; i < allStudents.length; i++) {
   for (let j = 0; j < neudStudents.length; j++) {
-    if (neudStudents[j] !== students[i]) {
-      goodStudents.push(students[i]);
+    if (neudStudents[j] !== allStudents[i]) {
+      goodStudents.push(allStudents[i]);
       console.log(goodStudents);
     }
   }
