@@ -11,8 +11,8 @@ let simpleCount = (count) => {
 
 
 console.log("2", simpleCount(2));
-console.log("3", simpleCount(3));
+console.log("-11", simpleCount(-11));
 console.log("4", simpleCount(4));
 console.log("5", simpleCount(5));
 console.log("6", simpleCount(6));
-console.log("7", simpleCount(7)); 
+console.log("883", simpleCount(883)); 
