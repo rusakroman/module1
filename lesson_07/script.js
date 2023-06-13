@@ -8,7 +8,7 @@
 {
   const allStudents = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Попов', 'Соколов'];
   const neudStudents = ['Сидоров', 'Смирнов', 'Попов'];
-  console.log(allStudents.filter(item => neudStudents.includes(item)));
+  console.log(allStudents.filter(item => !neudStudents.includes(item)));
 }
 
 
