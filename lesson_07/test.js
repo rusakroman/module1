@@ -13,6 +13,9 @@ for (let i = 0; i < allStudents.length; i++) {
   let found = false; // флаг, указывающий, найден ли элемент во втором массиве
   for (let j = 0; j < failedStudents.length; j++) {
     // тут условия при котором будет break
+    if (allStudents[i] === failedStudents[j]) {
+      found = true;
+    }
   }
   if (!found) {
     goodStudents.push(allStudents[i]); // если элемент не найден, добавляем его в массив

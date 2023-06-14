@@ -1,41 +1,26 @@
 "use strict";
 
+const arr = [];
+let min = 0;
+let max = 0;
 
+const foo = (length, n, m) => {
 
-// Вторая задача:
-
-// Скопируйте код task01.js в task02.js
-
-// Продолжаем работать с предыдущей функцией
-
-// Функция принимает еще два параметра n и m
-
-// Числа m и n формируют диапазон, в пределах которого должно сгенерироваться числа для массива
-// m и n включительно
-
-// Учтите, что n и m могут быть отрицательными, а также может быть n > m или n < m.
-
-
-
-
-{
-  const arr = [];
-  let min = 0;
-  let max = 0;
-
-  const foo = (length, n, m) => {
-
-    if (n > m) {
-      max = n;
-    } else if (n < m) {
-      max = m;
-    }
-    for (let i = 0; i < length; i++) {
-      arr.push(Math.round(Math.random() * (max - min) + min));
-    }
-    return arr;
+  if (n > m) {
+    max = n;
   }
 
-  const result = foo(12, 10, 30);
-  console.log(result);
+  if (n < m) {
+    max = m;
+  }
+  if (n === m) {
+    alert('выберите неодинаковые числа');
+  }
+  for (let i = 0; i < length; i++) {
+    arr.push(Math.floor(Math.random() * (Math.max(n, m) - Math.min(n, m) + 1)) + Math.min(n, m));
+  }
+  return arr;
 }
+
+const result = foo(22, -10, -30);
+console.log(result);
