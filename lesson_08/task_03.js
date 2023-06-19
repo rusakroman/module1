@@ -11,7 +11,7 @@
 
   const foo = (length, m, n, str) => {
     if (str !== 'even' && str !== 'odd') {
-      alert('Иди нахер!');
+      alert('введите even или odd');
       return ourArray;
     }
 
