@@ -11,27 +11,30 @@
 
 const randNumber = Math.floor((Math.random() * 100) + 1);
 
-console.log(randNumber);
-
-
-const userNumber = +prompt('Загадай число', '1');
+let userNumber = +prompt('Загадай число от 1 до 100', '1');
 
 while (randNumber !== userNumber) {
 
+  if (randNumber === userNumber) {
+    alert('Правильно!');
+  }
+
+  if (userNumber < 1 || userNumber > 100) {
+    alert('Ты что не понял в каком интервале число?');
+    alert('Число от 1 до 100!!!');
+    break;
+  }
+
   if (randNumber > userNumber) {
     alert('Больше');
-    const userNumber = +prompt('Введите новый вариант', '1');
+    userNumber = +prompt('Введите новый вариант', '1');
     continue;
   }
 
   if (randNumber < userNumber) {
     alert('Меньше!');
-    const userNumber = +prompt('Введите новый вариант', '1');
+    userNumber = +prompt('Введите новый вариант', '1');
     continue;
-  }
-
-  if (randNumber === userNumber) {
-    alert('Правильно!');
   }
 
 
