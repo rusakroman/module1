@@ -26,7 +26,8 @@ const cart = {
   },
 
   calculateItemPrice() {
-    return this.items.reduce((acc, item) => acc + (item.productPrice * item.productCount), 0);
+
+    return this.totalPrice = this.items.reduce((acc, item) => acc + (item.productPrice * item.productCount), 0);
   },
 
 
@@ -57,9 +58,6 @@ console.log(cart.items);
 
 const res = cart.calculateItemPrice();
 console.log(res);
-
-// cart.clear();
-// console.log(cart.items);
 
 cart.print();
 
