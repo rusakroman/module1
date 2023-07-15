@@ -40,6 +40,12 @@ const cart = {
     this.items = [];
   },
 
+  print() {
+    console.log(JSON.stringify(this.items));
+    cart.calculateItemPrice();
+    console.log('Общая стоимость корзины :>>>', this.totalPrice);
+  },
+
 }
 
 cart.add('Macbook', 150000, 1)
@@ -48,11 +54,14 @@ cart.add('Наушники Apple', 36000, 5)
 
 console.log(cart.items);
 
-const prow = cart.calculateItemPrice();
-console.log(prow);
 
-cart.clear;
-console.log(cart.items);
+const res = cart.calculateItemPrice();
+console.log(res);
+
+// cart.clear();
+// console.log(cart.items);
+
+cart.print();
 
 
 
