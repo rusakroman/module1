@@ -8,7 +8,7 @@ const cart = {
 
   // Чтобы это предотвратить, необходимо свойство totalPrice сделать геттером который будет возвращать результат вызова метода calculateItemPrice
   get totalPrice() {
-    return this.totalPrice = this.calculateItemPrice();
+    return this.calculateItemPrice();
   },
 
 
@@ -21,13 +21,13 @@ const cart = {
     }
 
     cart.items.push(product);
-    this.calculateItemPrice();
+    // this.calculateItemPrice();
     this.increaseCount();
   },
 
   calculateItemPrice() {
 
-    return this.totalPrice = this.items.reduce((acc, item) => acc + (item.productPrice * item.productCount), 0);
+    return this.items.reduce((acc, item) => acc + (item.productPrice * item.productCount), 0);
   },
 
 
@@ -43,15 +43,17 @@ const cart = {
 
   print() {
     console.log(JSON.stringify(this.items));
+    console.log('Общая стоимость корзины print :>>>', this.totalPrice);
+    // console.log(JSON.stringify(this.items));
     // console.log([this.items]);
-    // cart.calculateItemPrice(); ???????????????тут тоже убираем его??????????????
-    console.log('Общая стоимость корзины :>>>', this.totalPrice);
+    // cart.calculateItemPrice();
+    // console.log('Общая стоимость корзины :>>>', this.totalPrice);
   },
 
 }
 
-cart.add('Macbook', 150000, 1)
-cart.add('Apple watch', 80000, 3)
+cart.add('Macbook', 150000, 12)
+cart.add('Apple watch', 810000, 3)
 cart.add('Наушники Apple', 36000, 5)
 
 
