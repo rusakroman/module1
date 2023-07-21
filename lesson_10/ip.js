@@ -24448,6 +24448,15 @@ const listIPv4 = [
   "10.0.32.20"
 ];
 
-const unique = (new Set(listIPv4));
+// const unique = (new Set(listIPv4));
 
-console.log(unique.size);
+// console.log(unique.size);
+
+
+const foo = (x) => {
+  const unique = (new Set(x));
+  return unique.size;
+}
+
+const res = foo(listIPv4);
+console.log(res);
