@@ -22,11 +22,11 @@ const foo = () => {
   }
 
   else if (randNumber === userNumber) {
-    return alert(userNumber);
+    return alert('Правильно, загадано число ' + userNumber);
 
   }
 
 }
 
-foo(54);
+foo();
 
