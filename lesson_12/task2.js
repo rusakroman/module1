@@ -16,9 +16,7 @@ const functionRecurs = (arrMass) => {
     functionRecurs(arrMass);
   }
 
-  else if (summ >= 50) {
-    return arrMass;
-  }
+  return arrMass;
 }
 
 const res = functionRecurs(arrMass);
