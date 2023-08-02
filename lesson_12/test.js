@@ -18,11 +18,16 @@ const cart = {
     };
     cart.items.push(product);
     this.increaseCount();
+    this.calculateItemCount();
   },
 
   calculateItemPrice() {
     return this.items.reduce((acc, item) => acc +
       (item.productPrice * item.productCount), 0);
+  },
+
+  calculateItemCount() {
+    return this.count = this.items.reduce((acc, item) => acc + item.productCount, 0);
   },
 
 
