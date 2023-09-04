@@ -4,6 +4,10 @@ const ROCK = "КАМЕНЬ";
 const SISSORS = "НОЖНИЦЫ";
 const PAPER = "БУМАГА";
 const DRAW = "НИЧЬЯ";
+const count = {
+  playerCounter: 0,
+  pcCounter: 0 
+};
 
 
 
@@ -43,23 +47,56 @@ function computerInput() {
 }
 
 
-function winner(cChoise, pChoise) {
-  if (cChoise === pChoise) {
-    return DRAW;
+// function winner(cChoise, pChoise) {
+//   if (cChoise === pChoise) {
+//     return DRAW;
+//   }
+  
+//   if (cChoise === ROCK && pChoise === PAPER || cChoise === PAPER && pChoise === SISSORS ||
+//     cChoise === SISSORS && pChoise === ROCK) {
+//     return 'PLAYER_WON';
+//   }
 
-  } else if (cChoise === ROCK && pChoise === PAPER || cChoise === PAPER && pChoise === SISSORS ||
-    cChoise === SISSORS && pChoise === ROCK) {
-    return 'PLAYER_WON';
-  }
-
-  else return 'COMPUTER_WON';
-}
+//   else return 'COMPUTER_WON';
+// }
 
 
 function game() {
   const pChoise = getInput();
   const cChoise = computerInput();
-  console.log(winner(cChoise, pChoise));
+  if (cChoise === pChoise) {
+    confirm('Хотите сыграть еще?') ? game() : console.log('Конец игры');
+  }
+
+  if (cChoise === ROCK && pChoise === PAPER || cChoise === PAPER && pChoise === SISSORS ||
+    cChoise === SISSORS && pChoise === ROCK) {
+    count.playerCounter++;
+    console.log('Player win!');
+
+    confirm('Хотите сыграть еще?') ? game() : console.log('Конец игры');
+    console.log(count);
+  } else {
+    count.pcCounter++;
+    console.log('PC win!');
+    confirm('Хотите сыграть еще?') ? game() : console.log('Конец игры');
+    console.log(count);
+  }
+
+
+
 }
 
 game();
+
+
+
+// (()=> {
+
+
+
+
+
+
+// window.RPS = game;
+  
+// })();
