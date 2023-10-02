@@ -67,17 +67,20 @@
     console.log(counter.user);
     console.log(counter.bot);
 
-    if (counter.user !== 0 && counter.bot !== 0) {
-      mainWrapper();
-    } else if (counter.user == 0) {
+    if (counter.user === 0) {
       console.log('Бот победил');
       return;
-    } else {
+    } if (counter.bot === 0) {
       console.log('Игрок победил');
       return;
     }
+
+    else if (counter.user !== 0 && counter.bot !== 0) {
+      mainWrapper();
+    }
+
   }
 
-  window.RPS = mainWrapper();
+  window.RPS = mainWrapper;
 
 })();
